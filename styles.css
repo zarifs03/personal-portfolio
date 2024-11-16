@@ -94,29 +94,57 @@ nav {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 8s ease infinite;
+}
+
+.hero-tagline {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    width: max-content;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    animation: 
+        typing 2s steps(30) 2s forwards,
+        cursor .4s step-end infinite alternate,
+        fadeIn 0.1s 2s forwards;
 }
 
 .hero-links {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1rem;
     align-items: center;
+    margin-top: 1rem;
 }
 
-.resume-button {
+/* Buttons and Links */
+.resume-button,
+.cta-button1,
+.cta-button2 {
     display: inline-block;
     padding: 0.8rem 2rem;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    background: var(--gradient-purple);
     color: white;
     border: none;
 }
 
-.resume-button:hover {
+.resume-button {
+    background: var(--gradient-purple);
+}
+
+.cta-button1 {
+    background: var(--gradient-primary);
+}
+
+.cta-button2 {
+    background: var(--gradient-secondary);
+}
+
+.resume-button:hover,
+.cta-button1:hover,
+.cta-button2:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
 }
@@ -146,11 +174,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-.social-link:hover svg {
-    fill: white;
-}
-
-/* Section Titles */
+/* Section Styles */
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -282,29 +306,6 @@ nav {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     font-size: 1.1rem;
-    text-align: center;
-}
-
-/* Buttons */
-.cta-button1, .cta-button2 {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    background: var(--gradient-primary);
-    color: white;
-    border: none;
-}
-
-.cta-button2 {
-    background: var(--gradient-secondary);
-}
-
-.cta-button1:hover, .cta-button2:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -321,16 +322,27 @@ footer {
 }
 
 /* Animations */
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1 }
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .hero-name {
         font-size: 3rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
     }
     
     .section-title {
