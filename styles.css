@@ -1,4 +1,3 @@
-/* Global Styles */
 :root {
     --gradient-primary: linear-gradient(45deg, #00d2ff, #3a7bd5);
     --gradient-secondary: linear-gradient(45deg, #4a00e0, #8e2de2);
@@ -10,6 +9,7 @@
     --text-secondary: #b3b3b3;
 }
 
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -46,13 +46,13 @@ nav {
 
 .nav-content {
     display: flex;
-    justify-content: center; /* Changed from flex-end to center */
+    justify-content: center;
     padding: 1.5rem 0;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem; /* Using gap instead of margin for more consistent spacing */
+    gap: 2rem;
     align-items: center;
 }
 
@@ -94,12 +94,7 @@ nav {
     animation: gradient 8s ease infinite;
 }
 
-/* Projects Section */
-.projects {
-    padding: 6rem 0;
-    background-color: var(--bg-dark);
-}
-
+/* Section Titles */
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -108,10 +103,9 @@ nav {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: 100%;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
     padding-bottom: 0.5rem;
 }
 
@@ -119,12 +113,19 @@ nav {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
     height: 3px;
     background: var(--gradient-purple);
     border-radius: 2px;
     opacity: 0.5;
+}
+
+/* Projects Section */
+.projects {
+    padding: 6rem 0;
+    background-color: var(--bg-dark);
 }
 
 .project-grid {
@@ -165,6 +166,7 @@ nav {
     font-weight: 500;
 }
 
+/* Skills Section */
 .skills {
     padding: 6rem 0;
     background-color: #0d0d0d;
@@ -212,36 +214,6 @@ nav {
     padding: 6rem 0;
     text-align: center;
     background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-}
-
-/* Reset and rewrite section title styles */
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    background: var(--gradient-purple);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 100%; /* Add full width */
-    position: relative;
-    display: block; /* Change to block */
-    padding-bottom: 0.5rem;
-    left: 0; /* Remove left positioning */
-    transform: none; /* Remove transform */
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Center the underline */
-    transform: translateX(-50%); /* Center the underline */
-    width: 200px; /* Fixed width for the underline */
-    height: 3px;
-    background: var(--gradient-purple);
-    border-radius: 2px;
-    opacity: 0.5;
 }
 
 .contact-content {
@@ -294,18 +266,12 @@ footer {
 
 /* Animations */
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
     .hero-name {
         font-size: 3rem;
@@ -319,14 +285,6 @@ footer {
         padding: 1rem 0;
     }
     
-    .nav-links a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
     }
