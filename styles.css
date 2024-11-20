@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@700&family=Nunito:wght@400;600&family=DM+Mono&display=swap');
+
+body { 
+    font-family: 'Nunito', sans-serif; 
+}
+
+h1, h2, h3, .hero-name { 
+    font-family: 'Proxima Nova', sans-serif; font-weight: 700; 
+}
+
+.project-tags, .skill-item { 
+    font-family: 'DM Mono', monospace; 
+}
+
 :root {
     --gradient-primary: linear-gradient(45deg, #00d2ff, #3a7bd5);
     --gradient-secondary: linear-gradient(45deg, #4a00e0, #8e2de2);
@@ -21,7 +35,6 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-primary);
     line-height: 1.6;
@@ -385,7 +398,7 @@ footer {
     content: '';
     position: absolute;
     top: 12px; 
-    left: 48%;
+    left: 46%;
     width: 8px; 
     height: 8px; 
     margin-left: -4px;
