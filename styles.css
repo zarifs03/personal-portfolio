@@ -463,3 +463,59 @@ footer {
         transform: translateX(-50%) translateY(-5px);
     }
 }
+
+/* Experience Section */
+.experience {
+    padding: 6rem 0;
+    background-color: #0d0d0d;  /* Matching your skills section background */
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-title {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 700;
+}
+
+.experience-company {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.experience-date {
+    color: #8e8e8e;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: 'DM Mono', monospace;
+}
+
+.experience-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
