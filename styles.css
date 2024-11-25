@@ -540,7 +540,7 @@ footer {
 
 /* Experience Section */
 .experience {
-    padding: 6rem 0;
+    padding: 0rem 0 9rem 0;
     background-color: #0d0d0d;  /* Matching your skills section background */
 }
 
@@ -584,12 +584,5 @@ footer {
     margin-bottom: 1rem;
     font-family: 'DM Mono', monospace;
 }
-
-.experience-description {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    font-family: 'Nunito', sans-serif;
-}
-
 
 
