@@ -585,4 +585,11 @@ footer {
     font-family: 'DM Mono', monospace;
 }
 
+.experience-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+}
+
+
 
