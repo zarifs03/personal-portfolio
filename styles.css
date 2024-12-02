@@ -474,19 +474,6 @@ footer {
     .section-title {
         font-size: 2rem;
     }
-    
-    .nav-content {
-        padding: 1rem 0;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .nav-links a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
 }
 
 .scroll-down {
@@ -594,6 +581,31 @@ footer {
 @media only screen and (max-width: 700px) {
     body .cursor {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex; /* Ensure hamburger is visible */
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    .nav-links {
+        display: flex; /* Show nav links on larger screens */
     }
 }
 
