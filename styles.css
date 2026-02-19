@@ -416,6 +416,23 @@ img.job-logo {
     opacity: 0.9;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #9ca3af;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
 @media (min-width: 768px) {
     /* Desktop Navigation */
     .navbar {
