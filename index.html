@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--hero section (name + small about me section)-->
+        <section id="hero">
+            <h1>Zarif Solaiman</h1>
+            <p>Computer Science & AI Graduate</p>
+            <p>Passionate about web development, AI, and building intelligent applications with real-world impact.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-cards-grid">
+                <div class="project-card">
+                    <img src="honours-thesis.png" alt="...">
+                    <div class="container">
+                        <h4><b>Honours Research</b></h4>
+                        <p>Explored the use of Large Language Models (LLMs) to predict perioperative risk in paediatric patients from unstructured clinical notes.</p>
+                        <a href="https://github.com/zarifs03/honours-thesis" class="project-btn">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="calorie-counter.png" alt="...">
+                    <div class="container">
+                        <h4><b>Calorie Counter</b></h4>
+                        <p>Application for looking up foods and their nutrition information (calories, macronutrients).</p>
+                        <a href="https://github.com/zarifs03/calorie-counter" class="project-btn">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="mindmate.png" alt="...">
+                    <div class="container">
+                        <h4><b>AI Therapist Chatbot</b></h4>
+                        <p>This web application is a chatbot that interacts with users and provides therapy-like responses to user prompts.</p>
+                        <a href="https://github.com/knockoffduck/chat-app-project" class="project-btn">View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="construction.png" alt="...">
+                    <div class="container">
+                        <h4><b>AI Resume Analyser</b></h4>
+                        <p>Coming soon...</p>
+                        <a href="#" class="project-btn">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">Next.js</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">Django</div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="job-card">
+                <div class="job-header" onclick="toggleCard(this)">
+                <span class="job-title">Data Entry Assistant @ UWA</span>
+                <span class="job-dates">Jun 2023 - Present</span>
+                <span class="toggle-btn">+</span>
+                </div>
+                <div class="job-body">
+                <div class="job-body-inner">
+                    <div class="job-logo">
+                        <img src="uwa.svg" alt="UWA logo">
+                    </div>
+                    <div class="job-meta">
+                    <span class="meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Perth, Australia
+                    </span>
+                    <span class="meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                        uwa.edu.au/home
+                    </span>
+                    </div>
+                    <p class="job-desc">
+                    Supported research projects through accurate data entry and validation of experimental datasets using Microsoft Excel. Using Python to perform basic statistical analysis, assiting researchers in interpreting experimental results.
+                    </p>
+                    <div class="skill-tags">
+                    <span class="tag">Microsoft Excel</span>
+                    <span class="tag">Python</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header" onclick="toggleCard(this)">
+                <span class="job-title">Software Developer @ Coders for Causes</span>
+                <span class="job-dates">Jun 2024 - Jul 2024</span>
+                <span class="toggle-btn">+</span>
+                </div>
+                <div class="job-body">
+                <div class="job-body-inner">
+                    <div class="job-logo">
+                        <img src="cfc.svg" alt="CFC logo">
+                    </div>
+                    <div class="job-meta">
+                    <span class="meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Perth, Australia
+                    </span>
+                    <span class="meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                        codersforcauses.org
+                    </span>
+                    </div>
+                    <p class="job-desc">
+                    Worked as part of a student development team to design and implement Django REST APIs for event creation and RSVP workflows, automating manual confirmation steps.
+                    </p>
+                    <div class="skill-tags">
+                    <span class="tag">Django</span>
+                    <span class="tag">Python</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header" onclick="toggleCard(this)">
+                <span class="job-title">Data Migration Intern @ Zonta House Refuge Association</span>
+                <span class="job-dates">Nov 2023 - Dec 2023</span>
+                <span class="toggle-btn">+</span>
+                </div>
+                <div class="job-body">
+                <div class="job-body-inner">
+                    <div class="job-logo">
+                        <img src="zonta.png" alt="Zonta House logo" class="logo-contain">
+                    </div>
+                    <div class="job-meta">
+                    <span class="meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Perth, Australia
+                    </span>
+                    <span class="meta-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                        zontahouse.org.au
+                    </span>
+                    </div>
+                    <p class="job-desc">
+                    Organised client records from multiple legacy sources into structured Excel spreadsheets to support migration to a new software platform.
+                    </p>
+                    <div class="skill-tags">
+                    <span class="tag">Microsoft Excel</span>
+                    <span class="tag">Tableau</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!--contact form-->
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <form action="https://formspree.io/f/xvzbrnzz" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <!--copyright footer-->
+    <footer>
+        <p>&copy; 2026 Zarif Solaiman. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
