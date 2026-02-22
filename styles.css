@@ -17,6 +17,11 @@ h2 {
     text-align: center;
 }
 
+html {
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
