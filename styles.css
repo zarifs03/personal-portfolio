@@ -121,6 +121,9 @@ section {
 .project-cards-grid {
     max-width: 400px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
 }
 
 .project-card {
@@ -130,6 +133,8 @@ section {
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -139,6 +144,9 @@ section {
 
 .project-card .container {
     padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-card h4 {
@@ -152,6 +160,7 @@ section {
     color: #fff;
     line-height: 1.5;
     margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
 .project-btn {
@@ -173,6 +182,7 @@ section {
     height: 180px;
     object-fit: cover;
     border-radius: 5px 5px 0 0;
+    flex-shrink: 0;
 }
 
 #skills {
@@ -491,6 +501,7 @@ img.job-logo {
     .project-cards-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
         gap: 1.5rem;
         max-width: 900px;
         margin: 0 auto;
